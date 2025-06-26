@@ -4,7 +4,7 @@ import os
 
 # Use OpenAI's actual API key
 openai.api_key = os.environ["OPENAI_API_KEY"]
-model = "openai/gpt-4.1-mini"
+model = "gpt-4.1-mini"
 
 st.title("Joke Explainer")
 joke_input = st.text_area("Enter a joke:", height=150)
