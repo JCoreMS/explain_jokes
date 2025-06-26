@@ -15,7 +15,7 @@ if st.button("Submit"):
     else:
         with st.spinner("Explaining the joke..."):
             try:
-                response = openai.responses.create(
+                response = openai.chat.completions.create(
                     model=model,
                     messages=[
                         {"role": "user", "content": f"Can you explain this joke: {joke_input}"}
