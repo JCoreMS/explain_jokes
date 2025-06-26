@@ -1,5 +1,2 @@
 streamlit==1.46.1
 openai==1.92.0
-
-
-export OPENAI_API_KEY="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"
