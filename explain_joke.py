@@ -32,7 +32,7 @@ if st.button("Submit"):
                             "content": f"Can you explain this joke: {joke_input}",
                          }
                     ],
-                    model="openai/gpt-4o-mini",
+                    model=model,
                 )
                 explanation = response.choices[0].message.content
                 st.subheader("Explanation")
