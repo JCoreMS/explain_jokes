@@ -4,6 +4,7 @@ import os
 
 # Use OpenAI's actual API key
 openai.api_key = os.environ["OPENAI_API_KEY"]
+model = "openai/gpt-4.1-mini"
 
 st.title("Joke Explainer")
 joke_input = st.text_area("Enter a joke:", height=150)
@@ -15,7 +16,7 @@ if st.button("Submit"):
         with st.spinner("Explaining the joke..."):
             try:
                 response = openai.responses.create(
-                    model="gpt-4.1-mini",  # or gpt-3.5-turbo
+                    model=model
                     messages=[
                         {"role": "user", "content": f"Can you explain this joke: {joke_input}"}
                     ]
