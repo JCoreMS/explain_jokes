@@ -16,7 +16,7 @@ if st.button("Submit"):
         with st.spinner("Explaining the joke..."):
             try:
                 response = openai.responses.create(
-                    model=model
+                    model=model,
                     messages=[
                         {"role": "user", "content": f"Can you explain this joke: {joke_input}"}
                     ]
